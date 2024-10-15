@@ -26,11 +26,11 @@ Fields used in Product2 obj. to save products from API
 **Post-steps after deploy:**
 
 **In Setup:**
--Go to Remote Site Settings 
+-**Go to Remote Site Settings**
 	- Add a new remote site setting caled DummyJson
 	- Remote Site Url : https://dummyjson.com
 	
--Go to Security (Or search for CSP / Or even deploy my file on cspTrustedSites folder)
+-**Go to Security** (Or search for CSP / Or even deploy my file on cspTrustedSites folder)
 	- click on 'Trusted URLS'
 	- Add a new Trusted Url with:
 		- API : dummyJson 
@@ -40,7 +40,7 @@ Fields used in Product2 obj. to save products from API
 		- Check if Active = true
 	(or the thumbnails of products will not load)
 
-- Go to Profiles - System Administrator 
+- **Go to Profiles - System Administrator**
 	-Custom Tab Settings and Product List should be Default On.
 	- now the tab appears on Sales nav Bar
         - you just have to "add more items" and product List and it should be done.
