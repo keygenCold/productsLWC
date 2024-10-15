@@ -1,0 +1,68 @@
+<template>
+    <lightning-card title="Product List" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+
+            <lightning-input 
+                label="Filter by Name" 
+                value={filterName} 
+                onchange={handleNameChange}
+                class="filter-input">
+            </lightning-input>
+            <lightning-input 
+                label="Filter by Category" 
+                value={filterCategory} 
+                onchange={handleCategoryChange}
+                class="filter-input">
+            </lightning-input>
+
+            <lightning-input 
+                label="Filter by Brand" 
+                value={filterBrand} 
+                onchange={handleBrandChange}
+                class="filter-input">
+            </lightning-input>
+
+            <lightning-button 
+                label="Refresh" 
+                onclick={retrieveProducts} 
+                class="slds-m-top_small">
+            </lightning-button>
+        </div>
+
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading..." size="medium"></lightning-spinner>
+        </template>
+
+        <template if:true={products.length}>
+            <table class="product-table slds-m-around_medium">
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Price (€)</th>
+                        <th>Stock</th>
+                        <th>Rating</th>
+                        <th class="image-column">Product Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={products} for:item="product">
+                        <tr key={product.Id}>
+                            <td>{product.Name}</td>
+                            <td>{product.Price__c}</td>
+                            <td>{product.Stock__c}</td>
+                            <td>{product.Rating__c}</td>
+                            <td class="image-cell">
+                                <img src={product.DisplayUrl} alt={product.Name} class="product-image" />
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </template>
+        <template if:true={totalStock}>
+            <div class="total-stock-container">
+                <p>Total Stock: {totalStock}</p>
+            </div>
+        </template>
+    </lightning-card>
+</template>
