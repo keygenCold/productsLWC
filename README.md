@@ -1,6 +1,5 @@
 # productsLWC
-**Components and classes used in lwc:
-**
+**Components and classes used in lwc:**
  - productList.js
  - productList.html
  - productList.js-meta.xml
