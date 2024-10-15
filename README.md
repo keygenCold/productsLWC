@@ -1,5 +1,6 @@
 # productsLWC
-Components and classes used in lwc:
+**Components and classes used in lwc:
+**
  - productList.js
  - productList.html
  - productList.js-meta.xml
@@ -23,9 +24,9 @@ Fields used in Product2 obj. to save products from API
 | Product SKU          | StockKeepingUnit      | Text(180)           |
 | Product Description  | Description           | Text Area(4000)     |
 
-Post-steps after deploy:
+**Post-steps after deploy:**
 
-In Setup:
+**In Setup:**
 -Go to Remote Site Settings 
 	- Add a new remote site setting caled DummyJson
 	- Remote Site Url : https://dummyjson.com
