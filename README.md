@@ -9,7 +9,6 @@ Components and classes used in lwc:
 
 Fields used in Product2 obj. to save products from API
 
-|--------------------------------------------------------------------|
 | Field Label          | API Name              | Data Type           |
 |----------------------|-----------------------|---------------------|
 |   Created fields     |		       |		     |
@@ -23,7 +22,7 @@ Fields used in Product2 obj. to save products from API
 | Product Name         | Name                  | Text(255)           |
 | Product SKU          | StockKeepingUnit      | Text(180)           |
 | Product Description  | Description           | Text Area(4000)     |
-|--------------------------------------------------------------------|
+
 Post-steps after deploy:
 
 In Setup:
